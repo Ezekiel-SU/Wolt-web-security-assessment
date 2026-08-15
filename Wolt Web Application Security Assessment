@@ -1,0 +1,91 @@
+Wolt Web Application Security Assessment
+1. Executive Summary
+This assessment focused on reviewing the security of the Wolt web application through application mapping and targeted security testing.
+The assessment covered authentication, authorization, API behavior, object access, sensitive data exposure, and HTTP header manipulation.
+No security vulnerabilities were identified during the documented testing.
+
+
+2. Scope
+Testing was performed against the Wolt web application and the functionality available within the authorized testing scope.
+The assessment focused on:
+Customer functionality
+Authentication
+User/account functionality
+Shopping functionality
+API endpoints identified during mapping
+Relevant application workflows
+Testing was performed using authorized test accounts and within the restrictions defined by the program.
+
+
+
+3. Methodology
+The assessment followed this methodology:
+Application
+↓
+Users
+↓
+Capabilities
+↓
+Business Objects
+↓
+Application Workflow
+↓
+Endpoint Mapping
+↓
+Security Testing
+↓
+Findings
+For each relevant capability, the associated business object and application flow were identified before testing the underlying functionality.
+
+
+4. Application Overview
+Wolt is a delivery platform connecting:
+Customers
+Restaurants / merchants
+Courier partners
+The customer application allows users to browse stores and products, search for products, manage a shopping cart, manage their profile, and interact with delivery-related functionality.
+
+
+5. Features Tested
+The following functionality was mapped and tested:
+Authentication
+Login flow
+Authentication tokens
+Unauthenticated requests
+Invalid authentication tokens
+Customer Account
+User profile
+/v1/user/me endpoint
+Authentication enforcement
+Sensitive data exposure
+Application Access Control
+Object-level access
+IDOR testing where applicable
+Authorization behavior
+HTTP Request Testing
+Authorization header manipulation
+Origin header manipulation
+Referer header manipulation
+
+6. Findings
+No vulnerabilities identified
+The tested functionality correctly enforced authentication and rejected invalid authentication credentials.
+No exploitable IDOR, sensitive data exposure, or authentication bypass was identified during the assessment.
+Header manipulation testing also did not identify a security vulnerability.
+
+
+7. Recommendation
+Although no vulnerabilities were identified during this assessment, the application should continue to enforce:
+Strong authentication controls
+Server-side authorization
+Object-level access controls
+Proper validation of authentication tokens
+Protection of sensitive user information
+Regular security testing should also be performed as application functionality changes.
+
+
+8. Conclusion
+The assessment demonstrated a structured approach to application security testing by first mapping the application's users, capabilities, business objects, workflows, and API endpoints before performing targeted security tests.
+No vulnerabilities were identified within the tested functionality.
+
+
